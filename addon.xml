@@ -5,11 +5,11 @@
        provider-name="personal">
 
   <extension point="xbmc.addon.repository" name="Vault Repository">
-    <info compressed="false">https://YOUR_HOST/vault-repo/addons.xml</info>
-    <checksum>https://YOUR_HOST/vault-repo/addons.xml.md5</checksum>
-    <datadir zip="true">https://YOUR_HOST/vault-repo/</datadir>
+    <info compressed="false">https://iamlucas84-cloud.github.io/vault-repo/addons.xml</info>
+    <checksum>https://https://iamlucas84-cloud.github.io/vault-repo/addons.xml.md5</checksum>
+    <datadir zip="true">https://iamlucas84-cloud.github.io/vault-repo/</datadir>
     <assets>
-      <info>https://YOUR_HOST/vault-repo/</info>
+      <info>https://iamlucas84-cloud.github.io/vault-repo/</info>
     </assets>
   </extension>
 
