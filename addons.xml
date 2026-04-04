@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons>
+  <addon id="plugin.video.vault" name="Vault Video" version="1.0.1" provider-name="personal">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0" />
+      <import addon="xbmc.gui" version="5.14.0" />
+      <import addon="script.module.requests" version="2.9.1" optional="false" />
+      <import addon="script.vault.service" version="1.0.0" optional="false" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Movies and TV — Umbrella-style with watch history and alerts</summary>
+      <description lang="en">
+      Stream Movies and TV via AllDebrid-resolved torrents and hosters.
+      Scrapes Orion, Jackett/Prowlarr and Torrentio. Links are ranked daily
+      for freshness and reliability. Watch history tracked per-title, per-episode.
+      New-episode notifications for watched shows.
+    </description>
+      <platform>all</platform>
+      <language>en</language>
+    </extension>
+  </addon>
+  <addon id="repository.vault" name="Vault Repository" version="1.0.0" provider-name="personal">
+    <extension point="xbmc.addon.repository" name="Vault Repository">
+      <info compressed="false">https://YOUR_HOST/vault-repo/addons.xml</info>
+      <checksum>https://YOUR_HOST/vault-repo/addons.xml.md5</checksum>
+      <datadir zip="true">https://YOUR_HOST/vault-repo/</datadir>
+      <assets>
+        <info>https://YOUR_HOST/vault-repo/</info>
+      </assets>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Personal Vault media repository</summary>
+      <description lang="en">
+      Personal Kodi repository hosting Vault Video (Movies/TV with watch history
+      and new-episode alerts) and the Vault background service.
+    </description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="repository.vault" name="Vault Repository" version="1.0.0" provider-name="personal">
+    <extension point="xbmc.addon.repository" name="Vault Repository">
+      <info compressed="false">https://YOUR_HOST/vault-repo/addons.xml</info>
+      <checksum>https://YOUR_HOST/vault-repo/addons.xml.md5</checksum>
+      <datadir zip="true">https://YOUR_HOST/vault-repo/</datadir>
+      <assets>
+        <info>https://YOUR_HOST/vault-repo/</info>
+      </assets>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Personal Vault media repository</summary>
+      <description lang="en">
+      Personal Kodi repository hosting Vault Video (Movies/TV with watch history
+      and new-episode alerts) and the Vault background service.
+    </description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+  <addon id="script.vault.service" name="Vault Service" version="1.0.1" provider-name="personal">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0" />
+      <import addon="script.module.requests" version="2.9.1" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Vault background service</summary>
+      <description lang="en">
+      Runs daily: checks for new episodes of watched shows, refreshes
+      AllDebrid link cache for watchlist items, and clears stale cache.
+    </description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+</addons>
